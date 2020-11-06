@@ -1,0 +1,12 @@
+<h1 *ngIf="text">Searching: "<b>{{ text }}</b>"</h1>
+
+<div *ngIf="heroes.length === 0" class="row">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No se encontraron resultados.
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-hero *ngFor="let hero of heroes" [hero]="hero"></app-hero>
+</div>

@@ -1,0 +1,20 @@
+<div class="row animated fadeIn fast">
+    <div class="col-md-6">
+        <div class="d-flex flex-column">
+
+            <img [src]="hero.img" [alt]="hero.name">
+            <a (click)="goBack()" class="btn btn-outline-danger btn-block mt-3">Back</a>
+        </div>
+    </div>
+    <div class="col-md-6 mt-5">
+        <h3>{{ hero.name | uppercase }} <small>({{ hero.appearance | date: "y" }})</small></h3>
+        <hr>
+        <p>
+            {{ hero.bio }}
+        </p>
+        <div>
+            <img *ngIf="hero.house === 'DC'" class="house-logo img-responsive" src="../../../../assets/img/DC-Logo.png" alt="logo-dc">
+            <img *ngIf="hero.house === 'Marvel'" class="house-logo img-responsive" src="../../../../assets/img/logo-marvel.png" alt="logo-marvel">
+        </div>
+    </div>
+</div>
